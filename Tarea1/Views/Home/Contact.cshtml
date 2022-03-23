@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = "Mis Datos";
+}
+<center>
+    <h1>
+        <u>Datos de Contacto</u> 
+    </h1>
+</center>
+
+<br />
+<label>
+    Nombre:
+</label><p>Wagner Rafael Suarez Suarez</p>
+<br />
+<label>
+    Matricula:
+</label><p>2020-10952</p>
+<br />
+<label>
+    Sección:
+</label><p>Sección 6, Lunes y Miercoles</p>
+<br />
+<label>
+    Foto:
+</label><br />
+<img src="~/Images/Foto de CV.jpeg"/><br /><br />
+<p><b>Wagner Rafael Suarez Suarez</b></p>
+<br />
+
+<address>
+    <strong>Correo ITLA:</strong>   <a href="mailto:202010952@itla.edu.do">202010952@itla.edu.do</a><br />
+    <strong>Correo Personal:</strong> <a href="mailto:wagner2164@gmail.com">wagner2164@gmail.com</a>
+</address>
+
+<form class="contacto" action="">
+    <fieldset>
+        <legend>Información Personal</legend>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" placeholder="Tu Nombre" required>
+
+        <label for="email">E-mail: </label>
+        <input type="email" id="email" placeholder="Tu Correo electrónico" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" placeholder="Tu Teléfono" required>
+
+        <label for="mensaje">Mensaje: </label>
+        <textarea id="mensaje"></textarea>
+
+    </fieldset>
+    
+    <fieldset>
+        <legend>Contacto</legend>
+
+        <p>Como desea ser Contactado:</p>
+
+        <div class="forma-contacto">
+            <input type="radio" name="contacto" value="telefono" id="telefono">
+            <label for="telefono">Teléfono</label>
+
+            <input type="radio" name="contacto" value="correo" id="correo">
+            <label for="correo">E-mail</label>
+
+            <a href="https://api.whatsapp.com/send?phone=18299130022" target="blank">
+                <label for="WhatsApp">WhatsApp</label>
+            </a>
+
+        </div>
+
+        <p>Si eligió Teléfono, elija la fecha y la hora</p>
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha">
+
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" min="09:00" max="18:00">
+    </fieldset>
+
+    <input type="submit" value="Enviar" class="boton boton-verde">
+
+</form>
